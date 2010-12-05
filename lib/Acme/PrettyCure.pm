@@ -35,11 +35,16 @@ sub members {
         when ('Fresh') {
             return $class->_get(qw(CurePeach CureBerry CurePine CurePassion));
         }
+        when ('HeartCatch') {
+            return $class->_get(qw(CureBlossom CureMarine CureSunshine CureMoonlight));
+        }
         default {
             die "can't find $team at pretty cure";
         }
     }
 }
+
+sub now { shift->members('HeartCatch') }
 
 sub _get {
     my ($class, @names) = @_;
