@@ -20,7 +20,7 @@ sub transform {
 
     $self->is_precure(1);
 
-    unless $buddy->is_precure {
+    if ($buddy && !$buddy->is_precure) {
         say for $self->challenge;
     }
 
