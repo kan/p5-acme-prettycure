@@ -5,9 +5,11 @@ use Test::More;
 
 use Acme::PrettyCure;
 
-my @members = Acme::PrettyCure->members('MaxHeart');
+my ($nagi, $hono, $hikari) = Acme::PrettyCure->members('MaxHeart');
 
-is scalar(@members), 3, 'pretty cure maxheart';
+isa_ok $nagi,   'Acme::PrettyCure::CureBlack';
+isa_ok $hono,   'Acme::PrettyCure::CureWhite';
+isa_ok $hikari, 'Acme::PrettyCure::ShinyLuminous';
 
 done_testing;
 
