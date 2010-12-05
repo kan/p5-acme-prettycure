@@ -24,7 +24,13 @@ sub members {
             return $class->_get(qw(CureBloom CureEgret));
         }
         when ('Five') {
-            return $class->_get(qw(CureDream CureRouge CureLemonade CureMint CureAqua));
+            return $class->_get(
+                qw(CureDream CureRouge CureLemonade CureMint CureAqua));
+        }
+        when ('FiveGoGo') {
+            return $class->_get(
+                qw(CureDream CureRouge CureLemonade CureMint CureAqua MilkyRose)
+            );
         }
         default {
             die "can't find $team at pretty cure";
