@@ -3,6 +3,40 @@ use strict;
 use warnings;
 our $VERSION = '0.01';
 
+use Any::Moose;
+
+use UNIVERSAL::require;
+
+sub members {
+    my ($self, $team) = @_;
+
+    if ($team eq 'AllStar') {
+        return get(qw(CureBlack CureWhite));
+    }
+    else {
+        # first
+        return get(qw(CureBlack CureWhite));
+    }
+}
+
+sub get {
+    my ($self, @names) = @_;
+
+    my @girls;
+    for my $name (@names) {
+        my $module = "Acme::PrettyCure::$name";
+        $module->require or die $@;
+
+        push @girls, $module->new;
+    }
+
+    return @girls;
+}
+
+
+no Any::Moose;
+__PACKAGE__->meta->make_immutable;
+
 1;
 __END__
 
