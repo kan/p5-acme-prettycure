@@ -4,6 +4,9 @@ use utf8;
 use Test::More;
 use Test::Exception;
 
+# skip warnings
+binmode(Test::More->builder->$_, ':utf8') for qw/failure_output output todo_output/;
+
 use Acme::PrettyCure::CureBlack;
 use Acme::PrettyCure::CureWhite;
 

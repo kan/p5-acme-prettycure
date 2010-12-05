@@ -1,26 +1,33 @@
 package Acme::PrettyCure;
-use strict;
-use warnings;
+use Any::Moose;
+use 5.10.0;
 our $VERSION = '0.01';
 
-use Any::Moose;
-
+use feature 'switch';
 use UNIVERSAL::require;
 
 sub members {
-    my ($self, $team) = @_;
+    my ($class, $team) = @_;
+    $team ||= 'First';
 
-    if ($team eq 'AllStar') {
-        return get(qw(CureBlack CureWhite));
-    }
-    else {
-        # first
-        return get(qw(CureBlack CureWhite));
+    given ($team) {
+        when ('AllStar') {
+            return $class->_get(qw(CureBlack CureWhite ShinyLuminous));
+        }
+        when ('First') {
+            return $class->_get(qw(CureBlack CureWhite));
+        }
+        when ('MaxHeart') {
+            return $class->_get(qw(CureBlack CureWhite ShinyLuminous));
+        }
+        default {
+            die "can't find $team at pretty cure";
+        }
     }
 }
 
-sub get {
-    my ($self, @names) = @_;
+sub _get {
+    my ($class, @names) = @_;
 
     my @girls;
     for my $name (@names) {
@@ -48,18 +55,16 @@ Acme::PrettyCure - All about Japanese battle heroine "Pretty Cure"
 
   use Acme::PrettyCure;
 
-  my $precure = Acme::PrettyCure->new;
-
   # retrieve member on their teams
-  my @allstar =  $precure->members('AllStar');    # retrieve all
-  my @allstar1 = $precure->members('AllStarDX1'); # retrieve first .. fresh
-  my @allstar2 = $precure->members('AllStarDX2'); # retrieve first .. heart_catch
-  my @first    = $precure->members;
-  my @mh       = $precure->members('MaxHeart');
-  my @ss       = $precure->members('SplashStar');
-  my @five     = $precure->members('Five');
+  my @allstar =  Acme::PrettyCure->members('AllStar');    # retrieve all
+  my @allstar1 = Acme::PrettyCure->members('AllStarDX1'); # retrieve first .. fresh
+  my @allstar2 = Acme::PrettyCure->members('AllStarDX2'); # retrieve first .. heart_catch
+  my @first    = Acme::PrettyCure->members;
+  my @mh       = Acme::PrettyCure->members('MaxHeart');
+  my @ss       = Acme::PrettyCure->members('SplashStar');
+  my @five     = Acme::PrettyCure->members('Five');
 
-  my $hc = $precure->now; # retrieve active team members
+  my $hc = Acme::PrettyCure->now; # retrieve active team members
 
 =head1 DESCRIPTION
 
@@ -69,15 +74,9 @@ http://en.wikipedia.org/wiki/Pretty_Cure
 
 =head1 METHODS
 
-=head2 new
-
-  my $precure = Acme::PrettyCure->new;
-
-Creates and returns a new Acme::PrettyCure object.
-
 =head2 members
 
-  my @precures = $precure->members('AllStar');
+  my @precures = Acme::PrettyCure->members('AllStar');
 
 returns Acme::PrettyCure::Girl based objects.
 
