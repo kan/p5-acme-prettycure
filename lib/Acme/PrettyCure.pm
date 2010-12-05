@@ -20,6 +20,9 @@ sub members {
         when ('MaxHeart') {
             return $class->_get(qw(CureBlack CureWhite ShinyLuminous));
         }
+        when ('SplashStar') {
+            return $class->_get(qw(CureBloom CureEgret));
+        }
         default {
             die "can't find $team at pretty cure";
         }
