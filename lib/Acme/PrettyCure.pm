@@ -1,7 +1,7 @@
 package Acme::PrettyCure;
 use Any::Moose;
 use 5.10.0;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use feature 'switch';
 use UNIVERSAL::require;
@@ -12,7 +12,30 @@ sub members {
 
     given ($team) {
         when ('AllStar') {
-            return $class->_get(qw(CureBlack CureWhite ShinyLuminous));
+            return $class->_get(
+                qw(CureBlack CureWhite ShinyLuminous 
+                   CureBloom CureEgret 
+                   CureDream CureRouge CureLemonade CureMint CureAqua MilkyRose 
+                   CurePeach CureBerry CurePine CurePassion 
+                   CureBlossom CureMarine CureSunshine CureMoonlight)
+            );
+        }
+        when ('AllStarDX1') {
+            return $class->_get(
+                qw(CureBlack CureWhite ShinyLuminous 
+                   CureBloom CureEgret 
+                   CureDream CureRouge CureLemonade CureMint CureAqua MilkyRose 
+                   CurePeach CureBerry CurePine)
+            );
+        }
+        when ('AllStarDX2') {
+            return $class->_get(
+                qw(CureBlack CureWhite ShinyLuminous 
+                   CureBloom CureEgret 
+                   CureDream CureRouge CureLemonade CureMint CureAqua MilkyRose 
+                   CurePeach CureBerry CurePine CurePassion 
+                   CureBlossom CureMarine)
+            );
         }
         when ('First') {
             return $class->_get(qw(CureBlack CureWhite));
