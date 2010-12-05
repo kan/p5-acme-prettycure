@@ -31,7 +31,7 @@ sub powerdown {
 before 'transform' => sub {
     my $self = shift;
 
-    $self->is_firy(0);
+    $self->is_fairy(0);
 };
 
 no Any::Moose;
