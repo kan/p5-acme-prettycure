@@ -23,6 +23,9 @@ sub members {
         when ('SplashStar') {
             return $class->_get(qw(CureBloom CureEgret));
         }
+        when ('Five') {
+            return $class->_get(qw(CureDream CureRouge CureLemonade CureMint CureAqua));
+        }
         default {
             die "can't find $team at pretty cure";
         }

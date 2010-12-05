@@ -3,7 +3,6 @@ name 'Acme-PrettyCure';
 all_from 'lib/Acme/PrettyCure.pm';
 
 requires 'Any::Moose';
-requires 'Perl6::Say';
 requires 'Time::Piece';
 
 tests 't/*.t';
