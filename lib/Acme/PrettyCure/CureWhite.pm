@@ -11,7 +11,15 @@ sub precure_name {'キュアホワイト'}
 sub birthday     { Time::Piece->new( '1990/04/04', '%Y/%m/%d' ) }
 sub age          { 14 }
 sub blood_type   {'B'}
-sub challenge    { qw(光の使者キュアブラック! 光の使者キュアホワイト! ふたりはプリキュア! 闇の力の僕たちよ! とっととおうちに帰りなさい!) }
+sub challenge {
+    qw(
+       光の使者、キュアブラック! 
+       光の使者、キュアホワイト! 
+       ふたりはプリキュア! 
+       闇の力の僕たちよ! 
+       とっととおうちに帰りなさい!
+    )
+}
 
 before 'transform' => sub {
     my ($self, $buddy) = @_;
