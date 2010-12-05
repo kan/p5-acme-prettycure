@@ -28,5 +28,14 @@ $saki->transform($mai);
 is $saki->name, 'キュアブルーム';
 is $mai->name, 'キュアイーグレット';
 
+$saki = $saki->powerup;
+$mai = $mai->powerup;
+
+isa_ok $saki, 'Acme::PrettyCure::CureBloom';
+isa_ok $mai,  'Acme::PrettyCure::CureEgret';
+
+is $saki->name, 'キュアブライト';
+is $mai->name, 'キュアウィンディ';
+
 done_testing;
 

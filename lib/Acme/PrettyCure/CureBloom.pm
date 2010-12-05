@@ -33,6 +33,9 @@ after 'transform' => sub {
     }
 };
 
+use Acme::PrettyCure::CureBright;
+sub powerup { Acme::PrettyCure::CureBright->new(is_precure => shift->is_precure) }
+
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;
 
