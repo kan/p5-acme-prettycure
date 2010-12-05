@@ -32,6 +32,9 @@ sub members {
                 qw(CureDream CureRouge CureLemonade CureMint CureAqua MilkyRose)
             );
         }
+        when ('Fresh') {
+            return $class->_get(qw(CurePeach CureBerry CurePine CurePassion));
+        }
         default {
             die "can't find $team at pretty cure";
         }
