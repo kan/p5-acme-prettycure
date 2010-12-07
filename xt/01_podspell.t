@@ -21,3 +21,4 @@ Kan Fushihara
 kan@mfac.jp
 Acme::PrettyCure
 hiroine
+precure
