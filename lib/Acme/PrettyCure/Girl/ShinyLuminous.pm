@@ -1,8 +1,8 @@
-package Acme::PrettyCure::ShinyLuminous;
+package Acme::PrettyCure::Girl::ShinyLuminous;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 sub human_name   {'九条ひかり'}
 sub precure_name {'シャイニー・ルミナス'}

@@ -9,10 +9,10 @@ use Acme::PrettyCure;
 # skip warnings
 binmode(Test::More->builder->$_, ':utf8') for qw/failure_output output todo_output/;
 
-my ($saki, $mai) = Acme::PrettyCure->members('SplashStar');
+my ($saki, $mai) = Acme::PrettyCure->girls('SplashStar');
 
-isa_ok $saki, 'Acme::PrettyCure::CureBloom';
-isa_ok $mai,  'Acme::PrettyCure::CureEgret';
+isa_ok $saki, 'Acme::PrettyCure::Girl::CureBloom';
+isa_ok $mai,  'Acme::PrettyCure::Girl::CureEgret';
 
 throws_ok { $saki->transform } qr/ラピ/, 'SSも単独変身不可能';
 throws_ok { $saki->transform($saki) } qr/ラピ/, '舞以外とも変身は出来ない';
@@ -31,8 +31,8 @@ is $mai->name, 'キュアイーグレット';
 $saki = $saki->powerup;
 $mai = $mai->powerup;
 
-isa_ok $saki, 'Acme::PrettyCure::CureBloom';
-isa_ok $mai,  'Acme::PrettyCure::CureEgret';
+isa_ok $saki, 'Acme::PrettyCure::Girl::CureBloom';
+isa_ok $mai,  'Acme::PrettyCure::Girl::CureEgret';
 
 is $saki->name, 'キュアブライト';
 is $mai->name, 'キュアウィンディ';

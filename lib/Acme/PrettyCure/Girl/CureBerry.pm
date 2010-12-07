@@ -1,8 +1,8 @@
-package Acme::PrettyCure::CureBerry;
+package Acme::PrettyCure::Girl::CureBerry;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 sub human_name   {'蒼乃美希'}
 sub precure_name {'キュアベリー'}

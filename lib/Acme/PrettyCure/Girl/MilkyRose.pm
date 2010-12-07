@@ -1,8 +1,8 @@
-package Acme::PrettyCure::MilkyRose;
+package Acme::PrettyCure::Girl::MilkyRose;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 has 'is_fairy' => (is => 'rw', isa => 'Bool', default => sub { 0 });
 

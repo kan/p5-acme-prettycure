@@ -1,8 +1,8 @@
-package Acme::PrettyCure::CureDream;
+package Acme::PrettyCure::Girl::CureDream;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 sub human_name   {'夢原のぞみ'}
 sub precure_name {'キュアドリーム'}

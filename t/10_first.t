@@ -9,10 +9,10 @@ use Acme::PrettyCure;
 # skip warnings
 binmode(Test::More->builder->$_, ':utf8') for qw/failure_output output todo_output/;
 
-my ($nagi, $hono) = Acme::PrettyCure->members('First');
+my ($nagi, $hono) = Acme::PrettyCure->girls('First');
 
-isa_ok $nagi, 'Acme::PrettyCure::CureBlack';
-isa_ok $hono, 'Acme::PrettyCure::CureWhite';
+isa_ok $nagi, 'Acme::PrettyCure::Girl::CureBlack';
+isa_ok $hono, 'Acme::PrettyCure::Girl::CureWhite';
 
 throws_ok { $nagi->transform } qr/メポ/, '初代は単独変身不可能';
 throws_ok { $nagi->transform($nagi) } qr/メポ/, 'ほのか以外とも変身は出来ない';

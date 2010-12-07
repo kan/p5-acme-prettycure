@@ -1,8 +1,8 @@
-package Acme::PrettyCure::CureAqua;
+package Acme::PrettyCure::Girl::CureAqua;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 sub human_name   {'水無月かれん'}
 sub precure_name {'キュアアクア'}

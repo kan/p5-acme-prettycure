@@ -1,8 +1,8 @@
-package Acme::PrettyCure::CureMint;
+package Acme::PrettyCure::Girl::CureMint;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 sub human_name   {'秋元こまち'}
 sub precure_name {'キュアミント'}

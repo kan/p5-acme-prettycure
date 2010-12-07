@@ -5,9 +5,9 @@ use Test::More;
 
 use Acme::PrettyCure;
 
-my @members = Acme::PrettyCure->members('AllStar');
+my @girls = Acme::PrettyCure->girls('AllStar');
 
-for my $member (@members) {
+for my $member (@girls) {
     is $member->name, $member->human_name;
     next if ref($member) =~ /Cure(Black|White|Bloom|Egret)/;
     $member->transform;

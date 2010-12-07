@@ -1,14 +1,16 @@
-package Acme::PrettyCure::CureBlack;
+package Acme::PrettyCure::Girl::CureWhite;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+use Time::Piece;
 
-sub human_name   {'美墨なぎさ'}
-sub precure_name {'キュアブラック'}
-sub birthday     { Time::Piece->( '1990/10/10', '%Y/%m/%d' ) }
-sub age          {14}
-sub blood_type   {'O'}
+with 'Acme::PrettyCure::Girl::Role';
+
+sub human_name   {'雪城ほのか'}
+sub precure_name {'キュアホワイト'}
+sub birthday     { Time::Piece->new( '1990/04/04', '%Y/%m/%d' ) }
+sub age          { 14 }
+sub blood_type   {'B'}
 sub challenge {
     qw(
        光の使者、キュアブラック! 
@@ -22,7 +24,7 @@ sub challenge {
 before 'transform' => sub {
     my ($self, $buddy) = @_;
 
-    die "ほのかがいないと変身できないメポ!" unless ref($buddy) =~ /CureWhite/;
+    die "なぎさがいないと変身できないミポ!" unless ref($buddy) =~ /CureBlack/;
 };
 
 after 'transform' => sub {

@@ -1,10 +1,10 @@
-package Acme::PrettyCure::CureBright;
+package Acme::PrettyCure::Girl::CureWindy;
 use utf8;
 use Any::Moose;
 
-extends 'Acme::PrettyCure::CureBloom';
+extends 'Acme::PrettyCure::Girl::CureEgret';
 
-override 'precure_name' => sub {'キュアブライト'};
+override 'precure_name' => sub {'キュアウィンディ'};
 override 'challenge' => sub {
     qw(
        天空に満ちる月、キュアブライト!

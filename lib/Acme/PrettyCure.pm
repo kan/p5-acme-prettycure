@@ -6,7 +6,7 @@ our $VERSION = '0.02';
 use feature 'switch';
 use UNIVERSAL::require;
 
-sub members {
+sub girls {
     my ($class, $team) = @_;
     $team ||= 'First';
 
@@ -67,14 +67,16 @@ sub members {
     }
 }
 
-sub now { shift->members('HeartCatch') }
+sub members { girls(@_) }
+
+sub now { shift->girls('HeartCatch') }
 
 sub _get {
     my ($class, @names) = @_;
 
     my @girls;
     for my $name (@names) {
-        my $module = "Acme::PrettyCure::$name";
+        my $module = "Acme::PrettyCure::Girl::$name";
         $module->require or die $@;
 
         push @girls, $module->new;
@@ -99,13 +101,13 @@ Acme::PrettyCure - All about Japanese battle heroine "Pretty Cure"
   use Acme::PrettyCure;
 
   # retrieve member on their teams
-  my @allstar =  Acme::PrettyCure->members('AllStar');    # retrieve all
-  my @allstar1 = Acme::PrettyCure->members('AllStarDX1'); # retrieve first .. fresh
-  my @allstar2 = Acme::PrettyCure->members('AllStarDX2'); # retrieve first .. heart_catch
-  my @first    = Acme::PrettyCure->members;
-  my @mh       = Acme::PrettyCure->members('MaxHeart');
-  my @ss       = Acme::PrettyCure->members('SplashStar');
-  my @five     = Acme::PrettyCure->members('Five');
+  my @allstar =  Acme::PrettyCure->girls('AllStar');    # retrieve all
+  my @allstar1 = Acme::PrettyCure->girls('AllStarDX1'); # retrieve first .. fresh
+  my @allstar2 = Acme::PrettyCure->girls('AllStarDX2'); # retrieve first .. heart_catch
+  my @first    = Acme::PrettyCure->girls;
+  my @mh       = Acme::PrettyCure->girls('MaxHeart');
+  my @ss       = Acme::PrettyCure->girls('SplashStar');
+  my @five     = Acme::PrettyCure->girls('Five');
 
   my $hc = Acme::PrettyCure->now; # retrieve active team members
 
@@ -119,9 +121,17 @@ http://en.wikipedia.org/wiki/Pretty_Cure
 
 =head2 members
 
-  my @precures = Acme::PrettyCure->members('AllStar');
+  my @precures = Acme::PrettyCure->girls('AllStar');
 
-returns Acme::PrettyCure::Girl based objects.
+returns C<Acme::PrettyCure::Girl::Role> act objects.
+
+=head2 members
+
+  alias of girls.
+
+=head2 now
+
+  returns team girls when now on air.
 
 =head1 AUTHOR
 

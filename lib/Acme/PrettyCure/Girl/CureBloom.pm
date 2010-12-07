@@ -1,8 +1,8 @@
-package Acme::PrettyCure::CureBloom;
+package Acme::PrettyCure::Girl::CureBloom;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 sub human_name   {'日向咲'}
 sub precure_name {'キュアブルーム'}
@@ -33,8 +33,8 @@ after 'transform' => sub {
     }
 };
 
-use Acme::PrettyCure::CureBright;
-sub powerup { Acme::PrettyCure::CureBright->new(is_precure => shift->is_precure) }
+use Acme::PrettyCure::Girl::CureBright;
+sub powerup { Acme::PrettyCure::Girl::CureBright->new(is_precure => shift->is_precure) }
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

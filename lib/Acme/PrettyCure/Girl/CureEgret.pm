@@ -1,8 +1,8 @@
-package Acme::PrettyCure::CureEgret;
+package Acme::PrettyCure::Girl::CureEgret;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 sub human_name   {'美翔舞'}
 sub precure_name {'キュアイーグレット'}
@@ -33,8 +33,8 @@ after 'transform' => sub {
     }
 };
 
-use Acme::PrettyCure::CureWindy;
-sub powerup { Acme::PrettyCure::CureWindy->new(is_precure => shift->is_precure) }
+use Acme::PrettyCure::Girl::CureWindy;
+sub powerup { Acme::PrettyCure::Girl::CureWindy->new(is_precure => shift->is_precure) }
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

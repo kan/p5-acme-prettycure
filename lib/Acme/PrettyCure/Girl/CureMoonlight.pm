@@ -1,8 +1,8 @@
-package Acme::PrettyCure::CureMoonlight;
+package Acme::PrettyCure::Girl::CureMoonlight;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Role';
+with 'Acme::PrettyCure::Girl::Role';
 
 sub human_name   {'月影ゆり'}
 sub precure_name {'キュアムーンライト'}
