@@ -6,13 +6,13 @@ use UNIVERSAL::require;
 
 my %SERIES = (
     First      => [qw/ CureBlack CureWhite /],
+    MaxHeart   => [qw/ CureBlackMH CureWhiteMH ShinyLuminous /],
     SplashStar => [qw/ CureBloom CureEgret /],
     Five       => [qw/ CureDream CureRouge CureLemonade CureMint CureAqua /],
     Fresh      => [qw/ CurePeach CureBerry CurePine CurePassion /],
     HeartCatch => [qw/ CureBlossom CureMarine CureSunshine CureMoonlight /],
 );
 
-$SERIES{MaxHeart} = [ @{ $SERIES{First} }, 'ShinyLuminous' ];
 $SERIES{FiveGoGo} = [ @{ $SERIES{Five} },  'MilkyRose' ];
 
 $SERIES{AllStar} = [
