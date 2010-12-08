@@ -1,6 +1,6 @@
 package Acme::PrettyCure;
 use Any::Moose;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use UNIVERSAL::require;
 
@@ -117,6 +117,7 @@ tv series with all movies.
 =head1 AUTHOR
 
 Kan Fushihara E<lt>kan.fushihara at gmail.comE<gt>
+Kazuhiro Osawa E<lt>ko@yappo.ne.jp<gt>
 
 =head1 SEE ALSO
 

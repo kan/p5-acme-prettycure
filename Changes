@@ -1,5 +1,9 @@
 Revision history for Perl extension Acme::PrettyCure
 
+0.03    Wed Dec 08 14:38:40 2010
+        - add TV series info. thanks to yappo
+        - CureBlack and CureWhite is 15 years old at MaxHeart
+
 0.02    Mon Dec 06 03:24:30 2010
         - fixed bugs
         - add 'AllStarDX1', 'AllStarDX2' teams
