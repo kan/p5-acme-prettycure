@@ -19,6 +19,8 @@ all_pod_files_spelling_ok('lib');
 __DATA__
 Kan Fushihara
 kan@mfac.jp
+Kazuhiro
+Osawa
 Acme::PrettyCure
 hiroine
 precure

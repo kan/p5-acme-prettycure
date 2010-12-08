@@ -6,6 +6,9 @@ use Test::Exception;
 
 use Acme::PrettyCure;
 
+# skip warnings
+binmode(Test::More->builder->$_, ':utf8') for qw/failure_output output todo_output/;
+
 my ($nagi, $hono, $hikari) = Acme::PrettyCure->girls('MaxHeart');
 
 isa_ok $nagi,   'Acme::PrettyCure::Girl::CureBlackMH';
