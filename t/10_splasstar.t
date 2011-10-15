@@ -3,6 +3,7 @@ use warnings;
 use utf8;
 use Test::More;
 use Test::Exception;
+use t::Utils;
 
 use Acme::PrettyCure;
 
@@ -23,7 +24,13 @@ throws_ok { $mai->transform($mai) } qr/チョピ/, '咲以外とも変身は出�
 is $saki->name, '日向咲';
 is $mai->name, '美翔舞';
 
-$saki->transform($mai);
+is_output sub { $saki->transform($mai); }, <<EOS, '変身時の台詞';
+輝く金の花、キュアブルーム!
+きらめく銀の翼、キュアイーグレット!
+ふたりはプリキュア!
+聖なる泉を汚す者よ!
+アコギな真似はおやめなさい!
+EOS
 
 is $saki->name, 'キュアブルーム';
 is $mai->name, 'キュアイーグレット';

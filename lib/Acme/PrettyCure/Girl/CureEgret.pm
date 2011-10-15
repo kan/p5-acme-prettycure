@@ -2,7 +2,7 @@ package Acme::PrettyCure::Girl::CureEgret;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Girl::Role';
+with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Futari/;
 
 sub human_name   {'美翔舞'}
 sub precure_name {'キュアイーグレット'}
@@ -23,14 +23,6 @@ before 'transform' => sub {
     my ($self, $buddy) = @_;
 
     die "咲がいないと変身できないチョピ!" unless ref($buddy) =~ /Cure(Bloom|Bright)/;
-};
-
-after 'transform' => sub {
-    my ($self, $buddy) = @_;
-
-    unless ($buddy->is_precure) {
-        $buddy->transform($self);
-    }
 };
 
 use Acme::PrettyCure::Girl::CureWindy;
