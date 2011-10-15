@@ -4,7 +4,7 @@ use Any::Moose;
 
 use Time::Piece;
 
-with 'Acme::PrettyCure::Girl::Role';
+with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Futari/;
 
 sub human_name   {'雪城ほのか'}
 sub precure_name {'キュアホワイト'}
@@ -25,14 +25,6 @@ before 'transform' => sub {
     my ($self, $buddy) = @_;
 
     die "なぎさがいないと変身できないミポ!" unless ref($buddy) =~ /CureBlack/;
-};
-
-after 'transform' => sub {
-    my ($self, $buddy) = @_;
-
-    unless ($buddy->is_precure) {
-        $buddy->transform($self);
-    }
 };
 
 no Any::Moose;

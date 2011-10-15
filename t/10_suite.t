@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 use Test::More;
 use Test::Exception;
-use Encode;
+use t::Utils;
 
 use Acme::PrettyCure;
 
@@ -27,20 +27,13 @@ is $hibi->name, '北条響';
 is $kana->name, '南野奏';
 is $eren->name, '黒川エレン';
 
-{
-    my $output;
-    open my $OUT, '>', \$output;
-    local *STDOUT = $OUT;
-    $hibi->transform($kana, $eren);
-    close($OUT);
-    is decode_utf8($output), <<EOS, '変身時の台詞';
+is_output sub { $hibi->transform($kana, $eren) }, <<EOS, '変身時の台詞';
 絶対に許さない!!!
 爪弾くは荒ぶる調べ! キュアメロディ!
 爪弾くはたおやかな調べ! キュアリズム!
 爪弾くは魂の調べ! キュアビート!
 スイートプリキュア!!!
 EOS
-}
 
 is $hibi->name, 'キュアメロディ';
 is $kana->name, 'キュアリズム';

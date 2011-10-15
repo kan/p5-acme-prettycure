@@ -3,6 +3,7 @@ use warnings;
 use utf8;
 use Test::More;
 use Test::Exception;
+use t::Utils;
 
 use Acme::PrettyCure;
 
@@ -23,7 +24,13 @@ throws_ok { $hono->transform($hono) } qr/ミポ/, 'なぎさ以外とも変身�
 is $nagi->name, '美墨なぎさ';
 is $hono->name, '雪城ほのか';
 
-$nagi->transform($hono);
+is_output sub { $nagi->transform($hono); }, <<EOS, '変身時の台詞';
+光の使者、キュアブラック!
+光の使者、キュアホワイト!
+ふたりはプリキュア!
+闇の力の僕たちよ!
+とっととおうちに帰りなさい!
+EOS
 
 is $nagi->name, 'キュアブラック';
 is $hono->name, 'キュアホワイト';
