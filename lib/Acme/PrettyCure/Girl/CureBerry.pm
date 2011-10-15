@@ -2,7 +2,7 @@ package Acme::PrettyCure::Girl::CureBerry;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Girl::Role';
+with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Fresh/;
 
 sub human_name   {'蒼乃美希'}
 sub precure_name {'キュアベリー'}
