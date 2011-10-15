@@ -47,7 +47,7 @@ sub members { girls(@_) }
 sub all_series{ keys %SERIES }
 sub tv_series{ grep { !/^All/ } keys %SERIES }
 
-sub now { shift->girls('HeartCatch') }
+sub now { shift->girls('Suite') }
 
 sub _get {
     my ($class, @names) = @_;
