@@ -2,7 +2,7 @@ package Acme::PrettyCure::Girl::CureLemonade;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Girl::Role';
+with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Five/;
 
 sub human_name   {'春日野うらら'}
 sub precure_name {'キュアレモネード'}
