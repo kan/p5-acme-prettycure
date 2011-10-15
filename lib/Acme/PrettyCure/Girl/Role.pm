@@ -26,11 +26,7 @@ sub transform {
 
     $self->is_precure(1);
 
-    if ($buddy && !$buddy->is_precure) {
-        $self->say($_) for $self->challenge;
-    } elsif (!$buddy) {
-        $self->say($_) for $self->challenge;
-    }
+    $self->say($_) for $self->challenge;
 
     return $self;
 }

@@ -5,6 +5,7 @@ all_from 'lib/Acme/PrettyCure.pm';
 requires 'Any::Moose';
 requires 'Time::Piece';
 requires 'UNIVERSAL::require';
+requires 'List::MoreUtils';
 
 tests 't/*.t';
 author_tests 'xt';

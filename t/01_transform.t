@@ -9,7 +9,7 @@ my @girls = Acme::PrettyCure->girls('AllStar');
 
 for my $member (@girls) {
     is $member->name, $member->human_name;
-    next if ref($member) =~ /Cure(Black|White|Bloom|Egret)/;
+    next if ref($member) =~ /Cure(Black|White|Bloom|Egret|Melody|Rhythm)/;
     $member->transform;
     is $member->name, $member->precure_name;
 }

@@ -11,13 +11,14 @@ my %SERIES = (
     Five       => [qw/ CureDream CureRouge CureLemonade CureMint CureAqua /],
     Fresh      => [qw/ CurePeach CureBerry CurePine CurePassion /],
     HeartCatch => [qw/ CureBlossom CureMarine CureSunshine CureMoonlight /],
+    Suite      => [qw/ CureMelody CureRhythm CureBeat /],
 );
 
 $SERIES{FiveGoGo} = [ @{ $SERIES{Five} },  'MilkyRose' ];
 
 $SERIES{AllStar} = [
     @{ $SERIES{MaxHeart} }, @{ $SERIES{SplashStar} }, @{ $SERIES{FiveGoGo} },
-    @{ $SERIES{Fresh} }, @{ $SERIES{HeartCatch} }
+    @{ $SERIES{Fresh} }, @{ $SERIES{HeartCatch} }, @{ $SERIES{Suite} },
 ];
 $SERIES{AllStarDX1} = [
     @{ $SERIES{MaxHeart} }, @{ $SERIES{SplashStar} }, @{ $SERIES{FiveGoGo} },
@@ -28,6 +29,12 @@ $SERIES{AllStarDX2} = [
     @{ $SERIES{Fresh} },
     qw/ CureBlossom CureMarine /
 ];
+$SERIES{AllStarDX3} = [
+    @{ $SERIES{MaxHeart} }, @{ $SERIES{SplashStar} }, @{ $SERIES{FiveGoGo} },
+    @{ $SERIES{Fresh} }, @{ $SERIES{HeartCatch} },
+    qw/ CureMelody CureRhythm /
+];
+
 
 sub girls {
     $_[0]->_get(@{ 
