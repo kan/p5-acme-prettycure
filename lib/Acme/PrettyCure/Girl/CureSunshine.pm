@@ -2,7 +2,7 @@ package Acme::PrettyCure::Girl::CureSunshine;
 use utf8;
 use Any::Moose;
 
-with 'Acme::PrettyCure::Girl::Role';
+with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::HeartCatch/;
 
 sub human_name   {'明堂院いつき'}
 sub precure_name {'キュアサンシャイン'}
