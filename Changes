@@ -1,5 +1,11 @@
 Revision history for Perl extension Acme::PrettyCure
 
+0.04    Sat Oct 25 01:56:22 2011
+        - add title "Suite Precure"
+        - add girl "CureFlower"
+        - add group "AllStarDX3"
+        - fixed challenge at transform
+
 0.03    Wed Dec 08 14:38:40 2010
         - add TV series info. thanks to yappo
         - CureBlack and CureWhite is 15 years old at MaxHeart

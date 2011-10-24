@@ -1,6 +1,6 @@
 package Acme::PrettyCure;
 use Any::Moose;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use UNIVERSAL::require;
 
@@ -11,7 +11,7 @@ my %SERIES = (
     Five       => [qw/ CureDream CureRouge CureLemonade CureMint CureAqua /],
     Fresh      => [qw/ CurePeach CureBerry CurePine CurePassion /],
     HeartCatch => [qw/ CureBlossom CureMarine CureSunshine CureMoonlight /],
-    Suite      => [qw/ CureMelody CureRhythm CureBeat /],
+    Suite      => [qw/ CureMelody CureRhythm CureBeat CureMuse /],
 );
 
 $SERIES{FiveGoGo} = [ @{ $SERIES{Five} },  'MilkyRose' ];
