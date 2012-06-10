@@ -12,6 +12,7 @@ my %SERIES = (
     Fresh      => [qw/ CurePeach CureBerry CurePine CurePassion /],
     HeartCatch => [qw/ CureBlossom CureMarine CureSunshine CureMoonlight /],
     Suite      => [qw/ CureMelody CureRhythm CureBeat CureMuse /],
+    Smile      => [qw/ CureHappy CureSunny CurePeace CureMarch CureBeauty /],
 );
 
 $SERIES{FiveGoGo} = [ @{ $SERIES{Five} },  'MilkyRose' ];
@@ -34,6 +35,13 @@ $SERIES{AllStarDX3} = [
     @{ $SERIES{Fresh} }, @{ $SERIES{HeartCatch} },
     qw/ CureMelody CureRhythm /
 ];
+$SERIES{AllStarNewStage} = [
+    @{ $SERIES{MaxHeart} }, @{ $SERIES{SplashStar} }, @{ $SERIES{FiveGoGo} },
+    @{ $SERIES{Fresh} }, @{ $SERIES{HeartCatch} }, @{ $SERIES{Suite} },
+    @{ $SERIES{Smile} },
+    qw/ CureEcho /
+];
+
 
 
 sub girls {
@@ -47,7 +55,7 @@ sub members { girls(@_) }
 sub all_series{ keys %SERIES }
 sub tv_series{ grep { !/^All/ } keys %SERIES }
 
-sub now { shift->girls('Suite') }
+sub now { shift->girls('Smile') }
 
 sub _get {
     my ($class, @names) = @_;

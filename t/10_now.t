@@ -6,9 +6,9 @@ use Test::More;
 use Acme::PrettyCure;
 
 my @now = Acme::PrettyCure->now;
-my @suite = Acme::PrettyCure->girls('Suite');
+my @smile = Acme::PrettyCure->girls('Smile');
 
-is_deeply \@now, \@suite, 'now "Suite Precure"';
+is_deeply \@now, \@smile, 'now "Smile Precure"';
 
 done_testing;
 

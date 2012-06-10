@@ -21,5 +21,9 @@ my @dx3 = Acme::PrettyCure->girls('AllStarDX3');
 
 is scalar(@dx3), 21, 'pretty cure allstar_dx3';
 
+my @ns = Acme::PrettyCure->girls('AllStarNewStage');
+
+is scalar(@ns), 29, 'pretty cure allstar_ns';
+
 done_testing;
 
