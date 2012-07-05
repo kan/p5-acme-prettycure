@@ -24,5 +24,9 @@ is_output sub { $miyuki->transform($akane, $yayoi, $nao, $reika); }, <<EOS, '変
 輝け! スマイルプリキュア!
 EOS
 
+for ( 1 ..100 ) {
+    like $yayoi->challenge_with_jankenpon, qr/じゃんけんぽん（(グー|チョキ|パー)）♪ /;
+}
+
 done_testing;
 
