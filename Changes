@@ -1,5 +1,8 @@
 Revision history for Perl extension Acme::PrettyCure
 
+0.06    Tue Oct 02 23:36:18 2012
+        - add 'challenge_with_jankenpon' to CurePeace. thanks to @maka2_donzoko
+
 0.05    Sun Jun 10 23:12:50 2012
         - add title "Smile Precure"
         - add girl "CureEcho"
