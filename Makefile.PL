@@ -6,6 +6,7 @@ requires 'Any::Moose';
 requires 'Time::Piece';
 requires 'UNIVERSAL::require';
 requires 'List::MoreUtils';
+requires 'Math::Random::MT';
 
 tests 't/*.t';
 author_tests 'xt';

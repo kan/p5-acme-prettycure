@@ -2,14 +2,33 @@ package Acme::PrettyCure::Girl::CurePeace;
 use utf8;
 use Any::Moose;
 
+use Math::Random::MT;
+
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Smile/;
+
+has janken_db => (
+    is         => 'ro',
+    isa        => 'ArrayRef',
+    default    => sub {
+        [
+            qw(0 0 チョキ パー グー チョキ チョキ グー チョキ パー グー パー
+              チョキ グー パー グー パー チョキ チョキ パー グー パー チョキ
+              パー チョキ パー パー グー チョキ グー パー 0 グー)
+        ];
+    },
+);
 
 sub human_name   {'黄瀬やよい'}
 sub precure_name {'キュアピース'}
 sub age          {14}
 sub challenge { 'ピカピカぴかりんじゃんけんぽん♪ キュアピース!' }
 sub challenge_with_jankenpon {
-    my $jankenpon = ( qw/グー チョキ パー/ )[ rand(3) ];
+    my ($self, $story_no) = @_;
+
+    my $gen = Math::Random::MT->new();
+    my $jankenpon = $story_no ? $self->janken_db->[$story_no-1] 
+                              : ( qw/グー チョキ パー/ )[ $gen->rand(3) ];
+    $jankenpon ||= "";
     my $words     =  $_[0]->challenge();
     $words =~ s/(?=♪)/（$jankenpon）/;
     return $words;
