@@ -133,6 +133,7 @@ tv series with all movies.
 
 Kan Fushihara E<lt>kan.fushihara at gmail.comE<gt>
 Kazuhiro Osawa E<lt>ko@yappo.ne.jp<gt>
+Makamaka Hannyaharamitu, <makamaka[at]cpan.org>
 
 =head1 SEE ALSO
 
