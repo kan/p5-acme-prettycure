@@ -1,5 +1,9 @@
 Revision history for Perl extension Acme::PrettyCure
 
+0.07    Sat Oct 06 16:43:55 2012
+        - fixed suite transform message
+        - support colorize transform
+
 0.06    Tue Oct 02 23:36:18 2012
         - add 'challenge_with_jankenpon' to CurePeace. thanks to @maka2_donzoko
 
