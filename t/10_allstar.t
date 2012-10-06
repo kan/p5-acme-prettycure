@@ -7,7 +7,7 @@ use Acme::PrettyCure;
 
 my @girls = Acme::PrettyCure->girls('AllStar');
 
-is scalar(@girls), 23, 'pretty cure allstar';
+is scalar(@girls), 28, 'pretty cure allstar';
 
 my @dx1 = Acme::PrettyCure->girls('AllStarDX1');
 

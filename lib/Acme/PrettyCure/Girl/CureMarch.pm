@@ -8,6 +8,7 @@ sub human_name   {'緑川なお'}
 sub precure_name {'キュアマーチ'}
 sub age          {14}
 sub challenge { '勇気リンリン直球勝負! キュアマーチ!' }
+sub color { 34 }
 
 
 no Any::Moose;

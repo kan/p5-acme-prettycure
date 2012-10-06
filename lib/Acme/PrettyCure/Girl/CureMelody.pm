@@ -10,6 +10,7 @@ sub human_name   {'北条響'}
 sub precure_name {'キュアメロディ'}
 sub age          {14}
 sub challenge { '爪弾くは荒ぶる調べ! キュアメロディ!' }
+sub color { 199 }
 
 before 'transform' => sub {
     my ($self, @buddies) = @_;

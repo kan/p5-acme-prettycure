@@ -16,6 +16,7 @@ sub challenge {
        全てをひとつにするために
     )
 }
+sub color { 213 }
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

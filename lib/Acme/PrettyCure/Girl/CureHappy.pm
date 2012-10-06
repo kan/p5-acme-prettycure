@@ -8,6 +8,7 @@ sub human_name   {'星空みゆき'}
 sub precure_name {'キュアハッピー'}
 sub age          {14}
 sub challenge { 'キラキラ輝く未来の光! キュアハッピー!' }
+sub color { 200 }
 
 
 no Any::Moose;

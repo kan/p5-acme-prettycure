@@ -8,6 +8,7 @@ sub human_name   {'花咲つぼみ'}
 sub precure_name {'キュアブロッサム'}
 sub age          {14}
 sub challenge { qw(大地に咲く一輪の花、キュアブロッサム!) }
+sub color { 207 }
 
 
 no Any::Moose;

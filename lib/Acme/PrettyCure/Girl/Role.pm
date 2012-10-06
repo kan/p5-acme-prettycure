@@ -4,14 +4,23 @@ use Any::Moose '::Role';
 
 use Encode;
 
-requires qw(human_name precure_name challenge);
+requires qw(human_name precure_name challenge color);
 
 has 'is_precure' => (is => 'rw', isa => 'Bool', default => sub { 0 });
 
 sub say {
     my ($self, $text) = @_;
+    my $color = $self->color;
+    if ( defined $color ) {
+        print "\e[38;5;${color}m";
+    }
     print encode_utf8("$text\n");
+    if ( defined $color ) {
+        print "\e[0m";
+    }
 }
+
+sub color { undef }
 
 sub name {
     my $self = shift;

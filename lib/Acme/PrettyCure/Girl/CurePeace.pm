@@ -33,6 +33,7 @@ sub challenge_with_jankenpon {
     $words =~ s/(?=♪)/（$jankenpon）/;
     return $words;
 }
+sub color { 226 }
 
 
 no Any::Moose;

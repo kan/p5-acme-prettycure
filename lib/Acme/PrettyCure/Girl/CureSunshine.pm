@@ -8,6 +8,7 @@ sub human_name   {'明堂院いつき'}
 sub precure_name {'キュアサンシャイン'}
 sub age          {14}
 sub challenge { qw(陽の光浴びる一輪の花、キュアサンシャイン!) }
+sub color { 227 }
 
 
 no Any::Moose;

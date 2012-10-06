@@ -8,6 +8,7 @@ sub human_name   {'山吹祈里'}
 sub precure_name {'キュアパイン'}
 sub age          {14}
 sub challenge { qw(イエローハートは祈りの印 とれたてフレッシュ、キュアパイン!) }
+sub color { 214 }
 
 
 no Any::Moose;

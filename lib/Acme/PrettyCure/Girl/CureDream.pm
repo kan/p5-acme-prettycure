@@ -8,6 +8,7 @@ sub human_name   {'夢原のぞみ'}
 sub precure_name {'キュアドリーム'}
 sub age          {14}
 sub challenge { '大いなる希望の力、キュアドリーム!' }
+sub color { 199 }
 
 
 no Any::Moose;

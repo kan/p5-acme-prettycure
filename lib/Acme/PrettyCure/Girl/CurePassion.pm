@@ -8,6 +8,7 @@ sub human_name   {'東せつな'}
 sub precure_name {'キュアパッション'}
 sub age          {14}
 sub challenge { qw(真っ赤なハートは幸せの証 うれたてフレッシュ、キュアパッション!) }
+sub color { 196 }
 
 
 no Any::Moose;

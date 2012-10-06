@@ -8,6 +8,7 @@ sub human_name   {'調辺アコ'}
 sub precure_name {'キュアミューズ'}
 sub challenge { '爪弾くは女神の調べ! キュアミューズ!' }
 sub age          {9}
+sub color { 228 }
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

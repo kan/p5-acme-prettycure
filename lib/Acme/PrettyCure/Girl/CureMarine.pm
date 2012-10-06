@@ -8,6 +8,7 @@ sub human_name   {'来海えりか'}
 sub precure_name {'キュアマリン'}
 sub age          {14}
 sub challenge { qw(海風に揺れる一輪の花、キュアマリン!) }
+sub color { 33 }
 
 
 no Any::Moose;

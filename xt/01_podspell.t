@@ -21,6 +21,8 @@ Kan Fushihara
 kan@mfac.jp
 Kazuhiro
 Osawa
+Hannyaharamitu
+Makamaka
 Acme::PrettyCure
 hiroine
 precure

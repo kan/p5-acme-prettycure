@@ -8,6 +8,7 @@ sub human_name   {'青木れいか'}
 sub precure_name {'キュアビューティ'}
 sub age          {14}
 sub challenge { 'しんしんと降りつもる清き心! キュアビューティ!' }
+sub color { 27 }
 
 
 no Any::Moose;

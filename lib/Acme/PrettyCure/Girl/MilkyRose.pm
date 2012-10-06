@@ -11,6 +11,7 @@ sub human_name   {'美々野くるみ'}
 sub precure_name {'ミルキィーローズ'}
 sub age          {14}
 sub challenge { '青いバラは秘密の印、ミルキィローズ!' }
+sub color { 93 }
 
 sub name {
     my $self = shift;

@@ -11,6 +11,7 @@ sub fairy_name   {'セイレーン'}
 sub human_name   {'黒川エレン'}
 sub precure_name {'キュアビート'}
 sub challenge { '爪弾くは魂の調べ! キュアビート!' }
+sub color { 111 }
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

@@ -8,6 +8,7 @@ sub human_name   {'桃園ラブ'}
 sub precure_name {'キュアピーチ'}
 sub age          {14}
 sub challenge { qw(ピンクのハートは愛ある印 もぎたてフレッシュ、キュアピーチ!) }
+sub color { 198 }
 
 
 no Any::Moose;

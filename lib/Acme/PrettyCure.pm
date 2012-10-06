@@ -1,6 +1,6 @@
 package Acme::PrettyCure;
 use Any::Moose;
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 use UNIVERSAL::require;
 
@@ -20,6 +20,7 @@ $SERIES{FiveGoGo} = [ @{ $SERIES{Five} },  'MilkyRose' ];
 $SERIES{AllStar} = [
     @{ $SERIES{MaxHeart} }, @{ $SERIES{SplashStar} }, @{ $SERIES{FiveGoGo} },
     @{ $SERIES{Fresh} }, @{ $SERIES{HeartCatch} }, @{ $SERIES{Suite} },
+    @{ $SERIES{Smile} },
 ];
 $SERIES{AllStarDX1} = [
     @{ $SERIES{MaxHeart} }, @{ $SERIES{SplashStar} }, @{ $SERIES{FiveGoGo} },
@@ -43,6 +44,40 @@ $SERIES{AllStarNewStage} = [
 ];
 
 
+
+sub allstar {
+    my $class = shift;
+
+    my ($nagi, $hono) = $class->_get(qw(CureBlack CureWhite));
+    $nagi->transform($hono);
+    my ($hikari,) = $class->_get('ShinyLuminous');
+    $hikari->transform;
+
+    my ($saki, $mai) = $class->_get(qw(CureBloom CureEgret));
+    $saki->transform($mai);
+
+    my @five = $class->_get(@{$SERIES{FiveGoGo}});
+    my $nozomi = shift @five;
+    my $miruku = pop @five;
+    $nozomi->transform(@five);
+    $miruku->transform;
+
+    my @fresh = $class->_get(@{$SERIES{Fresh}});
+    my $love = shift @fresh;
+    $love->transform(@fresh);
+
+    my @hc = $class->_get(@{$SERIES{HeartCatch}});
+    my $tsubomi = shift @hc;
+    $tsubomi->transform(@hc);
+
+    my @suite = $class->_get(@{$SERIES{Suite}});
+    my $hibiki = shift @suite;
+    $hibiki->transform(@suite);
+
+    my @smile = $class->_get(@{$SERIES{Smile}});
+    my $miyuki = shift @smile;
+    $miyuki->transform(@smile);
+}
 
 sub girls {
     $_[0]->_get(@{ 

@@ -2,6 +2,13 @@ package Acme::PrettyCure::Girl::Role::Suite;
 use utf8;
 use Any::Moose '::Role';
 
+our $SUITE = [
+    '',
+    'ふたり',
+    '三人',
+    'みんな',
+];
+
 after 'transform' => sub {
     my ($self, @buddies) = @_;
 
@@ -17,6 +24,7 @@ after 'transform' => sub {
     }
 
     if ($first) {
+        $self->say('届け、' . $SUITE->[scalar(@buddies)] . 'の組曲!');
         $self->say('スイートプリキュア' . ('!' x (scalar(@buddies)+1)) );
     }
 };

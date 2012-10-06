@@ -8,6 +8,7 @@ sub human_name   {'日野あかね'}
 sub precure_name {'キュアサニー'}
 sub age          {14}
 sub challenge { '太陽サンサン熱血パワー! キュアサニー!' }
+sub color { 202 }
 
 
 no Any::Moose;
