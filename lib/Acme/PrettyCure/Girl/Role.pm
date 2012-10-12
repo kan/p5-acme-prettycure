@@ -4,7 +4,7 @@ use Any::Moose '::Role';
 
 use Encode;
 
-requires qw(human_name precure_name challenge color);
+requires qw(human_name precure_name challenge);
 
 has 'is_precure' => (is => 'rw', isa => 'Bool', default => sub { 0 });
 
