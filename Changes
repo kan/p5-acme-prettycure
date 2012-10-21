@@ -1,5 +1,8 @@
 Revision history for Perl extension Acme::PrettyCure
 
+0.072   Sun Oct 21 13:00:26 2012
+        - fix bug when use Moose
+
 0.07    Sat Oct 06 16:43:55 2012
         - fixed suite transform message
         - support colorize transform
