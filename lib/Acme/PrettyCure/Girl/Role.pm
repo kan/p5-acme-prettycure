@@ -4,7 +4,11 @@ use Any::Moose '::Role';
 
 use Encode;
 use Furl;
+use Cache::LRU;
+use Net::DNS::Lite;
 use Imager;
+
+$Net::DNS::Lite::CACHE = Cache::LRU->new(size => 256);
 
 requires qw(human_name precure_name challenge image_url);
 
@@ -45,14 +49,20 @@ sub transform {
 sub image {
     my $self = shift;
 
-    my $furl = Furl->new(agent => 'Acme-PrettyCure', timeout => 60);
-    my $res = $furl->get($self->image_url);
-    
+    my $furl = Furl::HTTP->new(
+        agent     => 'Acme-PrettyCure',
+        inet_aton => \&Net::DNS::Lite::inet_aton,
+        timeout   => 60,
+    );
+    my ( $minor_version, $status, $message, $headers, $content ) =
+      $furl->request( method => 'GET', url => $self->image_url, );
+
     my $img = Imager->new();
-    $img->read(data => $res->content, type => 'gif') or die $img->errstr;
+    $img->read(data => $content, type => 'gif') or die $img->errstr;
 
     open my $ah, '|-', qw/aview -reverse/ or die "aview:$!";
     $img->write( fh => $ah, type => 'pnm' ) or die $img->errstr;
+    close($ah);
 }
 
 1;
