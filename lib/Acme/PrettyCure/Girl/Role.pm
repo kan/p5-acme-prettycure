@@ -3,8 +3,10 @@ use utf8;
 use Any::Moose '::Role';
 
 use Encode;
+use Furl;
+use Imager;
 
-requires qw(human_name precure_name challenge);
+requires qw(human_name precure_name challenge image_url);
 
 has 'is_precure' => (is => 'rw', isa => 'Bool', default => sub { 0 });
 
@@ -38,6 +40,19 @@ sub transform {
     $self->say($_) for $self->challenge;
 
     return $self;
+}
+
+sub image {
+    my $self = shift;
+
+    my $furl = Furl->new(agent => 'Acme-PrettyCure', timeout => 60);
+    my $res = $furl->get($self->image_url);
+    
+    my $img = Imager->new();
+    $img->read(data => $res->content, type => 'gif') or die $img->errstr;
+
+    open my $ah, '|-', qw/aview -reverse/ or die "aview:$!";
+    $img->write( fh => $ah, type => 'pnm' ) or die $img->errstr;
 }
 
 1;
