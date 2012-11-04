@@ -35,6 +35,7 @@ sub challenge_with_jankenpon {
     return $words;
 }
 sub color { 226 }
+sub image_url { 'http://www.toei-anim.co.jp/tv/precure/images/character/c3_1.jpg' }
 
 
 no Any::Moose;

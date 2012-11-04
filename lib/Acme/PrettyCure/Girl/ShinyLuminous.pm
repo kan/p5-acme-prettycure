@@ -9,6 +9,7 @@ sub precure_name {'シャイニー・ルミナス'}
 sub birthday     { Time::Piece->( '1990/02/02', '%Y/%m/%d' ) }
 sub age          {13}
 sub blood_type   {'AB'}
+sub image_url    {'http://www.toei-anim.co.jp/tv/precure_MH/image/hikari/p01.gif'}
 sub challenge {
     qw(
        輝く命、シャイニールミナス!

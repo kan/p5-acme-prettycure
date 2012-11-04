@@ -58,9 +58,19 @@ sub image {
       $furl->request( method => 'GET', url => $self->image_url, );
 
     my $img = Imager->new();
-    $img->read(data => $content, type => 'gif') or die $img->errstr;
+    my $type;
+    if ($self->image_url =~ /\.gif$/) {
+        $type = 'gif';
+    }
+    elsif ($self->image_url =~ /\.png$/) {
+        $type = 'png';
+    }
+    elsif ($self->image_url =~ /\.jpe?g$/) {
+        $type = 'jpeg';
+    }
+    $img->read(data => $content, type => $type) or die $img->errstr;
 
-    open my $ah, '|-', qw/aview -reverse/ or die "aview:$!";
+    open my $ah, '|-', qw/aview -reverse -driver curses/ or die "aview:$!";
     $img->write( fh => $ah, type => 'pnm' ) or die $img->errstr;
     close($ah);
 }

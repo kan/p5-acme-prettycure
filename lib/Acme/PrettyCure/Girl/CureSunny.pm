@@ -9,6 +9,7 @@ sub precure_name {'キュアサニー'}
 sub age          {14}
 sub challenge { '太陽サンサン熱血パワー! キュアサニー!' }
 sub color { 202 }
+sub image_url { 'http://www.toei-anim.co.jp/tv/precure/images/character/c2_1.jpg' }
 
 
 no Any::Moose;

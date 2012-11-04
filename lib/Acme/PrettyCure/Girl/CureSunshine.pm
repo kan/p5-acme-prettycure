@@ -9,6 +9,7 @@ sub precure_name {'キュアサンシャイン'}
 sub age          {14}
 sub challenge { qw(陽の光浴びる一輪の花、キュアサンシャイン!) }
 sub color { 227 }
+sub image_url { 'http://www.toei-anim.co.jp/tv/hc_precure/images/chara/chara14.jpg' }
 
 
 no Any::Moose;

@@ -9,6 +9,7 @@ sub precure_name {'キュアアクア'}
 sub age          {15}
 sub challenge { '知性の青き泉、キュアアクア!' }
 sub color { 20 }
+sub image_url { 'http://www.toei-anim.co.jp/tv/yes_precure5/character/img/body_aqua.jpg' }
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

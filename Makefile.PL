@@ -9,6 +9,8 @@ requires 'List::MoreUtils';
 requires 'Math::Random::MT';
 requires 'Imager';
 requires 'Furl';
+requires 'Cache::LRU';
+requires 'Net::DNS::Lite';
 
 tests 't/*.t';
 author_tests 'xt';

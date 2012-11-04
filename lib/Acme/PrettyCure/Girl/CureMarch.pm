@@ -9,6 +9,7 @@ sub precure_name {'キュアマーチ'}
 sub age          {14}
 sub challenge { '勇気リンリン直球勝負! キュアマーチ!' }
 sub color { 34 }
+sub image_url {'http://www.toei-anim.co.jp/tv/precure/images/character/c4_1.jpg'}
 
 
 no Any::Moose;

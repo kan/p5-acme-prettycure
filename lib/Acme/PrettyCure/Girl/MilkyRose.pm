@@ -12,6 +12,7 @@ sub precure_name {'ミルキィーローズ'}
 sub age          {14}
 sub challenge { '青いバラは秘密の印、ミルキィローズ!' }
 sub color { 93 }
+sub image_url { '' }
 
 sub name {
     my $self = shift;

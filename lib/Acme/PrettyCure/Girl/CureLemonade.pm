@@ -9,6 +9,7 @@ sub precure_name {'キュアレモネード'}
 sub age          {13}
 sub challenge { 'はじけるレモンの香り、キュアレモネード!' }
 sub color { 220 }
+sub image_url {'http://www.toei-anim.co.jp/tv/yes_precure5/character/img/body_lemonade.jpg'}
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

@@ -9,6 +9,7 @@ sub precure_name {'キュアマリン'}
 sub age          {14}
 sub challenge { qw(海風に揺れる一輪の花、キュアマリン!) }
 sub color { 33 }
+sub image_url {'http://www.toei-anim.co.jp/tv/hc_precure/images/chara/chara02.jpg'}
 
 
 no Any::Moose;

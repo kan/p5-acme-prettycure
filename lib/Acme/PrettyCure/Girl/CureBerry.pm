@@ -9,6 +9,7 @@ sub precure_name {'キュアベリー'}
 sub age          {14}
 sub challenge { qw(ブルーのハートは希望の印 つみたてフレッシュ、キュアベリー!) }
 sub color { 63 }
+sub image_url { 'http://www.toei-anim.co.jp/tv/fresh_precure/character/img/main/curepeach_l.jpg' }
 
 
 no Any::Moose;

@@ -9,6 +9,7 @@ sub human_name   {'花咲薫子'}
 sub precure_name {'キュアフラワー'}
 sub age          { 67 }
 sub challenge { qw(聖なる光に輝く一輪の花、キュアフラワー！) }
+sub image_url { '' }
 
 before 'transform' => sub {
     my ($self,) = @_;

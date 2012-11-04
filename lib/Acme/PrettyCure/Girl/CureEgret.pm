@@ -9,6 +9,7 @@ sub precure_name {'キュアイーグレット'}
 sub birthday     { Time::Piece->( '1992/11/20', '%Y/%m/%d' ) }
 sub age          {14}
 sub blood_type   {'AB'}
+sub image_url    {'http://www.toei-anim.co.jp/tv/precure_SS/character/chara_mai01.gif'}
 sub challenge {
     "\e[38;5;198m輝く金の花、キュアブルーム!\e[0m",
     "\e[38;5;250mきらめく銀の翼、キュアイーグレット!\e[0m",

@@ -1,4 +1,3 @@
-
 package Acme::PrettyCure::Girl::CureBeat;
 use utf8;
 use Any::Moose;
@@ -12,6 +11,7 @@ sub human_name   {'黒川エレン'}
 sub precure_name {'キュアビート'}
 sub challenge { '爪弾くは魂の調べ! キュアビート!' }
 sub color { 111 }
+sub image_url { 'http://www.toei-anim.co.jp/tv/suite_precure/character/18_01/01.jpg' }
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

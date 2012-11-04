@@ -9,6 +9,7 @@ sub precure_name {'キュアミューズ'}
 sub challenge { '爪弾くは女神の調べ! キュアミューズ!' }
 sub age          {9}
 sub color { 228 }
+sub image_url {'http://www.toei-anim.co.jp/tv/suite_precure/character/35_01/01.jpg'}
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;

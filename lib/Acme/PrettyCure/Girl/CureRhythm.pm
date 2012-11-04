@@ -11,6 +11,7 @@ sub precure_name {'キュアリズム'}
 sub age          {14}
 sub challenge { '爪弾くはたおやかな調べ! キュアリズム!' }
 sub color { 225 }
+sub image_url { 'http://www.toei-anim.co.jp/tv/suite_precure/character/00_02/01.jpg' }
 
 before 'transform' => sub {
     my ($self, @buddies) = @_;
