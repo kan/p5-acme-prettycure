@@ -7,6 +7,8 @@ requires 'Time::Piece';
 requires 'UNIVERSAL::require';
 requires 'List::MoreUtils';
 requires 'Math::Random::MT';
+requires 'Imager';
+requires 'Furl';
 
 tests 't/*.t';
 author_tests 'xt';
