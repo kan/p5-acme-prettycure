@@ -1,5 +1,8 @@
 Revision history for Perl extension Acme::PrettyCure
 
+0.08    Sun Nov 04 12:00:00 2012
+        - support image method
+
 0.072   Sun Oct 21 13:00:26 2012
         - fix bug when use Moose
 

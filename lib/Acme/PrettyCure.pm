@@ -1,6 +1,6 @@
 package Acme::PrettyCure;
 use Any::Moose;
-our $VERSION = '0.08';
+our $VERSION = '0.081';
 
 use UNIVERSAL::require;
 
