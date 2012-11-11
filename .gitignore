@@ -11,3 +11,5 @@ Makefile.old
 nytprof.out
 MANIFEST.bak
 *.sw[po]
+Build
+_build/

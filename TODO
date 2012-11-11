@@ -7,7 +7,5 @@ Workクラスを作って作品の情報を管理
 - wikipediaのURL
 - DVD/BDのamazon URL
 - 映画のタイトルなど(Movieクラスにするべき?)
-Girlクラスに欲しい情報リスト
-- 画像(Acme::MorningMusume互換)
 SplashStar以外の強化バージョンの扱いをどうするか(キュアレインボー含め)
 キュアキャンディはどうするクル?
