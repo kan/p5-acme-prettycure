@@ -58,6 +58,7 @@
 #!end included /Users/kan/perl5/perlbrew/perls/perl-5.16.0/lib/5.16.0/ExtUtils/MANIFEST.SKIP
 
 ^\.git/
+.travis.yml
 \bRCS\b
 \bCVS\b
 ^MANIFEST\.

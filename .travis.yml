@@ -1,0 +1,8 @@
+language: perl
+perl:
+  - "5.16"
+  - "5.14"
+  - "5.10"
+
+script: "perl Build.PL; ./Build installdeps; ./Build test"
+
