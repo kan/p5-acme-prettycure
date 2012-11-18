@@ -85,6 +85,7 @@ nytprof
 perltidy.ERR$
 ^README.pod$
 ^README.mkdn$
+^README.md$
 ^tags$
 ^Acme-PrettyCure-
 ^MYMETA\.
