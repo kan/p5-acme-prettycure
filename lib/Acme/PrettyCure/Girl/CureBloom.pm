@@ -25,7 +25,12 @@ before 'transform' => sub {
 };
 
 use Acme::PrettyCure::Girl::CureBright;
-sub powerup { Acme::PrettyCure::Girl::CureBright->new(is_precure => shift->is_precure) }
+sub powerup { 
+    my $self = shift;
+    my $precure = Acme::PrettyCure::Girl::CureBright->new;
+    $precure->is_precure($self->is_precure);
+    return $precure;
+}
 
 no Any::Moose;
 __PACKAGE__->meta->make_immutable;
