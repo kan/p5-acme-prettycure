@@ -5,6 +5,8 @@ use utf8;
 use Test::More;
 use Encode;
 
+binmode(Test::More->builder->$_, ':utf8') for qw/failure_output output todo_output/;
+
 sub is_output(&$$) {
     my ($func, $expected, $comment) = @_;
 
