@@ -4,7 +4,7 @@
       "Kazuhiro Osawa E<lt>ko@yappo.ne.jp<gt>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120630",
    "license" : [
       "perl_5"
    ],
@@ -48,7 +48,7 @@
    "provides" : {
       "Acme::PrettyCure" : {
          "file" : "lib/Acme/PrettyCure.pm",
-         "version" : "0.082"
+         "version" : "0.083"
       },
       "Acme::PrettyCure::Girl::CureAqua" : {
          "file" : "lib/Acme/PrettyCure/Girl/CureAqua.pm",
@@ -221,5 +221,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.082"
+   "version" : "0.083"
 }
