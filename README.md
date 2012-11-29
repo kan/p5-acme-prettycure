@@ -2,6 +2,8 @@
 
 Acme::PrettyCure - All about Japanese battle heroine "Pretty Cure"
 
+[![Build Status](https://secure.travis-ci.org/kan/p5-acme-prettycure.png?branch=0.084)](https://travis-ci.org/kan/p5-acme-prettycure)
+
 # SYNOPSIS
 
     use Acme::PrettyCure;
