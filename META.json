@@ -48,7 +48,7 @@
    "provides" : {
       "Acme::PrettyCure" : {
          "file" : "lib/Acme/PrettyCure.pm",
-         "version" : "0.084"
+         "version" : "0.085"
       },
       "Acme::PrettyCure::Girl::CureAqua" : {
          "file" : "lib/Acme/PrettyCure/Girl/CureAqua.pm",
@@ -221,5 +221,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.084"
+   "version" : "0.085"
 }
