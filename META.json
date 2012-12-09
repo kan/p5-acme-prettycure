@@ -21,6 +21,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
+            "Test::Exception" : "0",
             "Test::More" : "0.98",
             "Test::Requires" : "0"
          }
@@ -48,7 +49,7 @@
    "provides" : {
       "Acme::PrettyCure" : {
          "file" : "lib/Acme/PrettyCure.pm",
-         "version" : "0.085"
+         "version" : "0.086"
       },
       "Acme::PrettyCure::Girl::CureAqua" : {
          "file" : "lib/Acme/PrettyCure/Girl/CureAqua.pm",
@@ -221,5 +222,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.085"
+   "version" : "0.086"
 }
