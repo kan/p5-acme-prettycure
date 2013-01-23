@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::Role::Suite;
 use utf8;
-use Any::Moose '::Role';
+use Moo::Role;
 
 our $SUITE = [
     '',

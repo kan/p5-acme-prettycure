@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::Role::DokiDoki;
 use utf8;
-use Any::Moose '::Role';
+use Moo::Role;
 
 after 'transform' => sub {
     my ($self, @buddies) = @_;

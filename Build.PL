@@ -14,7 +14,7 @@ my $build = Module::Build->new(
     configure_requires   => { 'Module::Build' => '0.38' },
     requires => {
         perl => '5.010001',
-        'Any::Moose' => '0',
+        'Moo' => '0',
         'Time::Piece' => '0',
         'UNIVERSAL::require' => '0',
         'List::MoreUtils' => '0',

@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureLemonade;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Five/;
 
@@ -10,8 +10,5 @@ sub age          {13}
 sub challenge { 'はじけるレモンの香り、キュアレモネード!' }
 sub color { 220 }
 sub image_url {'http://www.toei-anim.co.jp/tv/yes_precure5/character/img/body_lemonade.jpg'}
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

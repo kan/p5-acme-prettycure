@@ -1,5 +1,5 @@
 package Acme::PrettyCure;
-use Any::Moose;
+use Moo;
 our $VERSION = '0.091';
 
 use UNIVERSAL::require;
@@ -116,9 +116,6 @@ sub _get {
     return @girls;
 }
 
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;
 __END__

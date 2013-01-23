@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureFlower;
 use utf8;
-use Any::Moose;
+use Moo;
 use Time::Piece;
 
 with 'Acme::PrettyCure::Girl::Role';
@@ -19,9 +19,5 @@ before 'transform' => sub {
         die "CureFlower can transform only holy night";
     }
 };
-
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

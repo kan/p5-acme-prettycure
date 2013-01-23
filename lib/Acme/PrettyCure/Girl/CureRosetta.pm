@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureRosetta;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::DokiDoki/;
 
@@ -10,9 +10,5 @@ sub age          {14}
 sub challenge { 'ひだまりポカポカ!キュアロゼッタ' }
 sub color { 220 }
 sub image_url { 'http://www.toei-anim.co.jp/tv/dd_precure/img/character/chara_img02_03.png' }
-
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

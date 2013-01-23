@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureBloom;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Futari/;
 
@@ -31,8 +31,5 @@ sub powerup {
     $precure->is_precure($self->is_precure);
     return $precure;
 }
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

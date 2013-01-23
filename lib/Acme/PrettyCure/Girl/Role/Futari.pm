@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::Role::Futari;
 use utf8;
-use Any::Moose '::Role';
+use Moo::Role;
 
 around 'transform' => sub {
     my $transform = shift;

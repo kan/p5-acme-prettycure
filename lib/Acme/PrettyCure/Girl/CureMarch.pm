@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureMarch;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Smile/;
 
@@ -10,9 +10,5 @@ sub age          {14}
 sub challenge { '勇気リンリン直球勝負! キュアマーチ!' }
 sub color { 34 }
 sub image_url {'http://www.toei-anim.co.jp/tv/precure/images/character/c4_1.jpg'}
-
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

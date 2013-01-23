@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::Role;
 use utf8;
-use Any::Moose '::Role';
+use Moo::Role;
 
 use Encode;
 use Furl;
@@ -12,7 +12,11 @@ $Net::DNS::Lite::CACHE = Cache::LRU->new(size => 256);
 
 requires qw(human_name precure_name challenge image_url);
 
-has 'is_precure' => (is => 'rw', isa => 'Bool', default => sub { 0 });
+has 'is_precure' => (
+    is  => 'rw',
+    isa => sub { die "$_[0] is not a boolean" if $_[0] !~ /^[01]$/ },
+    default => sub {0}
+);
 
 sub say {
     my ($self, $text) = @_;

@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::ShinyLuminous;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with 'Acme::PrettyCure::Girl::Role';
 
@@ -18,8 +18,5 @@ sub challenge {
     )
 }
 sub color { 213 }
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

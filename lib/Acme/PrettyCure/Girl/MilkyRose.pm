@@ -1,10 +1,14 @@
 package Acme::PrettyCure::Girl::MilkyRose;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with 'Acme::PrettyCure::Girl::Role';
 
-has 'is_fairy' => (is => 'rw', isa => 'Bool', default => sub { 0 });
+has 'is_fairy' => (
+    is  => 'rw',
+    isa => sub { die "$_[0] is not a boolean" if $_[0] !~ /^[01]$/ },
+    default => sub {0}
+);
 
 sub fairy_name   {'ミルク'}
 sub human_name   {'美々野くるみ'}
@@ -35,8 +39,5 @@ before 'transform' => sub {
 
     $self->is_fairy(0);
 };
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

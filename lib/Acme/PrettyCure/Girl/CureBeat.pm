@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureBeat;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Suite/;
 
@@ -12,8 +12,5 @@ sub precure_name {'キュアビート'}
 sub challenge { '爪弾くは魂の調べ! キュアビート!' }
 sub color { 111 }
 sub image_url { 'http://www.toei-anim.co.jp/tv/suite_precure/character/18_01/01.jpg' }
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

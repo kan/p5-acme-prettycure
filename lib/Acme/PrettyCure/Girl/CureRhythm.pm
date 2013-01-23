@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureRhythm;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Suite/;
 
@@ -18,8 +18,5 @@ before 'transform' => sub {
 
     die "響がいないと変身できないニャ!" unless any { ref($_) =~ /CureMelody/ } @buddies;
 };
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

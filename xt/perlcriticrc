@@ -2,7 +2,7 @@
 allow=refs
 
 [TestingAndDebugging::RequireUseStrict]
-equivalent_modules = Any::Moose
+equivalent_modules = Moo Moo::Role
 
 [TestingAndDebugging::RequireUseWarnings]
-equivalent_modules = Any::Moose
+equivalent_modules = Moo Moo::Role

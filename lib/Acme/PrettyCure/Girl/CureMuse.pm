@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureMuse;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Suite/;
 
@@ -10,8 +10,5 @@ sub challenge { '爪弾くは女神の調べ! キュアミューズ!' }
 sub age          {9}
 sub color { 228 }
 sub image_url {'http://www.toei-anim.co.jp/tv/suite_precure/character/35_01/01.jpg'}
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

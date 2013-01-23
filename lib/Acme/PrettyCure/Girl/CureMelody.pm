@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureMelody;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Suite/;
 
@@ -22,8 +22,5 @@ before 'transform' => sub {
         $self->say('絶対に許さない' . ('!' x (scalar(@buddies)+1)) );
     }
 };
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

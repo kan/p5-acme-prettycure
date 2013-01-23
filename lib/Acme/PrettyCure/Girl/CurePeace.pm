@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CurePeace;
 use utf8;
-use Any::Moose;
+use Moo;
 
 use Math::Random::MT;
 
@@ -8,7 +8,7 @@ with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Smile/;
 
 has janken_db => (
     is         => 'ro',
-    isa        => 'ArrayRef',
+    isa        => sub { die "$_[0] is not ArrayRef" if ref($_[0]) ne 'ARRAY' },
     default    => sub {
         [
             qw(0 0 チョキ パー グー チョキ チョキ グー チョキ パー グー パー
@@ -36,9 +36,5 @@ sub challenge_with_jankenpon {
 }
 sub color { 226 }
 sub image_url { 'http://www.toei-anim.co.jp/tv/precure/images/character/c3_1.jpg' }
-
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

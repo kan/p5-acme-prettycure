@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureWhite;
 use utf8;
-use Any::Moose;
+use Moo;
 
 use Time::Piece;
 
@@ -26,8 +26,5 @@ before 'transform' => sub {
 
     die "なぎさがいないと変身できないミポ!" unless ref($buddy) =~ /CureBlack/;
 };
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

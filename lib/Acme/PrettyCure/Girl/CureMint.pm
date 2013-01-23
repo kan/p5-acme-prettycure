@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureMint;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Five/;
 
@@ -10,8 +10,5 @@ sub age          {15}
 sub challenge { 'やすらぎの緑の大地、キュアミント!' }
 sub color { 34 }
 sub image_url { 'http://www.toei-anim.co.jp/tv/yes_precure5/character/img/body_mint.jpg' }
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

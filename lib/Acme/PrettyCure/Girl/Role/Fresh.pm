@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::Role::Fresh;
 use utf8;
-use Any::Moose '::Role';
+use Moo::Role;
 
 before 'transform' => sub {
     my ($self, @buddies) = @_;

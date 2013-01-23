@@ -1,6 +1,6 @@
 package Acme::PrettyCure::Girl::CureBerry;
 use utf8;
-use Any::Moose;
+use Moo;
 
 with qw/Acme::PrettyCure::Girl::Role Acme::PrettyCure::Girl::Role::Fresh/;
 
@@ -10,9 +10,5 @@ sub age          {14}
 sub challenge { qw(ブルーのハートは希望の印 つみたてフレッシュ、キュアベリー!) }
 sub color { 63 }
 sub image_url { 'http://www.toei-anim.co.jp/tv/fresh_precure/character/img/main/curepeach_l.jpg' }
-
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;
