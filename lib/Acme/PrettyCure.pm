@@ -13,7 +13,7 @@ my %SERIES = (
     HeartCatch => [qw/ CureBlossom CureMarine CureSunshine CureMoonlight /],
     Suite      => [qw/ CureMelody CureRhythm CureBeat CureMuse /],
     Smile      => [qw/ CureHappy CureSunny CurePeace CureMarch CureBeauty /],
-    DokiDoki   => [qw/ CureHeart CureDiamond CureRosetta CureSword /],
+    DokiDoki   => [qw/ CureHeart CureSword /],
 );
 
 $SERIES{FiveGoGo} = [ @{ $SERIES{Five} },  'MilkyRose' ];
