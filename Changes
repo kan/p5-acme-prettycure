@@ -1,5 +1,9 @@
 Revision history for Perl extension Acme::PrettyCure
 
+0.1     Sun Feb 03 09:38:02 2013
+        - add title "DokiDoki Precure"
+        - change Any::Moose to Moo
+
 0.08    Sun Nov 04 12:00:00 2012
         - support image method
 
