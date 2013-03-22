@@ -1,5 +1,6 @@
 package Acme::PrettyCure;
 use Moo;
+use 5.008005;
 our $VERSION = '0.1';
 
 use UNIVERSAL::require;

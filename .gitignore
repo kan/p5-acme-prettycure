@@ -13,3 +13,8 @@ MANIFEST.bak
 *.sw[po]
 Build
 _build/
+.build
+_build_params
+/Build
+!Build/
+!META.json
