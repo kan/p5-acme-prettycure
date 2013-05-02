@@ -18,3 +18,7 @@ _build_params
 /Build
 !Build/
 !META.json
+/Acme-PrettyCure-*
+/.build
+/_build_params
+!LICENSE

@@ -4,47 +4,82 @@
       "Kan Fushihara <kan.fushihara at gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/0.0.44",
-   "license" : "perl_5",
+   "generated_by" : "Minilla/v0.3.0, CPAN::Meta::Converter version 2.130880",
+   "license" : [
+      "perl_5"
+   ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
    "name" : "Acme-PrettyCure",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author"
+      ]
+   },
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : 0
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
+            "Module::Build" : "0.38",
+            "Module::Build::Tiny" : "0"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.2"
          }
       },
       "runtime" : {
          "requires" : {
-            "Cache::LRU" : 0,
-            "Furl" : 0,
-            "Imager" : 0,
-            "List::MoreUtils" : 0,
-            "Math::Random::MT" : 0,
-            "Moo" : 0,
-            "Net::DNS::Lite" : 0,
-            "Time::Piece" : 0,
-            "UNIVERSAL::require" : 0,
+            "Cache::LRU" : "0",
+            "Furl" : "0",
+            "Imager" : "0",
+            "List::MoreUtils" : "0",
+            "Math::Random::MT" : "0",
+            "Moo" : "0",
+            "Net::DNS::Lite" : "0",
+            "Time::Piece" : "0",
+            "UNIVERSAL::require" : "0",
             "perl" : "5.010001"
          }
       },
       "test" : {
          "requires" : {
-            "Test::Exception" : 0,
+            "Test::Exception" : "0",
             "Test::More" : "0.98",
-            "Test::Requires" : 0
+            "Test::Requires" : "0"
          }
       }
    },
    "release_status" : "unstable",
    "resources" : {
-      "homepage" : "git://github.com/kan/p5-acme-prettycure/tree",
+      "bugtracker" : {
+         "web" : "https://github.com/kan/p5-acme-prettycure/issues"
+      },
+      "homepage" : "https://github.com/kan/p5-acme-prettycure",
       "repository" : {
-         "url" : "git://github.com/kan/p5-acme-prettycure.git"
+         "type" : "git",
+         "url" : "git://github.com/kan/p5-acme-prettycure.git",
+         "web" : "https://github.com/kan/p5-acme-prettycure"
       }
    },
-   "version" : "0.1"
+   "version" : "0.1",
+   "x_contributors" : [
+      "Kazuhiro Osawa <yappo@shibuya.pl>",
+      "Kan Fushihara <kan@mfac.jp>",
+      "makamaka <makamaka.donzoko@gmail.com>",
+      "Kan Fushihara <kan.fushihara@gmail.com>"
+   ]
 }

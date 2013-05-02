@@ -1,5 +1,7 @@
 Revision history for Perl extension Acme::PrettyCure
 
+{{$NEXT}}
+
 0.1     Sun Feb 03 09:38:02 2013
         - add title "DokiDoki Precure"
         - change Any::Moose to Moo
