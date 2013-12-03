@@ -129,7 +129,7 @@ Acme::PrettyCure - All about Japanese battle heroine "Pretty Cure"
 
   use Acme::PrettyCure;
 
-  # retrieve member on their teams
+  # retrieve members in a team
   my @allstar =  Acme::PrettyCure->girls('AllStar');    # retrieve all
   my @allstar1 = Acme::PrettyCure->girls('AllStarDX1'); # retrieve first .. fresh
   my @allstar2 = Acme::PrettyCure->girls('AllStarDX2'); # retrieve first .. heart_catch
@@ -142,7 +142,7 @@ Acme::PrettyCure - All about Japanese battle heroine "Pretty Cure"
 
 =head1 DESCRIPTION
 
-"Acme::PrettyCure" is most famous Japanese battle hiroine.
+"Acme::PrettyCure" is the most famous Japanese battle heroine group.
 
 http://en.wikipedia.org/wiki/Pretty_Cure
 
@@ -164,7 +164,7 @@ returns C<Acme::PrettyCure::Girl::Role> act objects.
 
 =head2 all_series
 
-tv series with all movies.
+tv series and all movies.
 
   my @all_series_names = Acme::PrettyCure->all_series;
 
