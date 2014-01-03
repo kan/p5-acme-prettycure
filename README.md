@@ -19,7 +19,7 @@ Acme::PrettyCure - All about Japanese battle heroine "Pretty Cure"
 
 # DESCRIPTION
 
-"Acme::PrettyCure" is most famous Japanese battle hiroine.
+"Acme::PrettyCure" is most famous Japanese battle heroine.
 
 http://en.wikipedia.org/wiki/Pretty\_Cure
 
