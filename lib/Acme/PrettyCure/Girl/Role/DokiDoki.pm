@@ -2,7 +2,9 @@ package Acme::PrettyCure::Girl::Role::DokiDoki;
 use utf8;
 use Moo::Role;
 
-sub _excla (@) { '!' x (scalar(@_)+1) }
+sub _excla {
+    '!' x (scalar(@_)+1);
+}
 
 before 'transform' => sub {
     my ($self, @buddies) = @_;
