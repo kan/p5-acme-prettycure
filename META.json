@@ -76,7 +76,7 @@
          "web" : "https://github.com/kan/p5-acme-prettycure"
       }
    },
-   "version" : "0.1.1",
+   "version" : "0.1.3",
    "x_contributors" : [
       "Kazuhiro Osawa <yappo@shibuya.pl>",
       "Kan Fushihara <kan@mfac.jp>",
